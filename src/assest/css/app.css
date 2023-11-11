@@ -1,0 +1,5 @@
+@import '/src/assest/abstract/_header.scss';
+@import '/src/assest/abstract/_login.scss';
+@import '/src/assest/abstract/_resetPassword.scss';
+@import '/src/assest/abstract/_hero-section.scss';
+@import '/src/assest/abstract/_sidebar.scss';

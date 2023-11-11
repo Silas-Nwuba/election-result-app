@@ -1,0 +1,134 @@
+@import '/src/assest/abstract/_base.scss';
+@import '/node_modules/bootstrap/dist/css/bootstrap.css';
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid $grey-color;
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    margin: 0px 40px;
+  }
+  .logo {
+    text-decoration: none;
+    img {
+      width: 100%;
+    }
+  }
+  .action-link {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: $nav-grey-color;
+      padding: 0px 10px;
+      li {
+        text-transform: capitalize;
+        font-size: 14px;
+        font-style: normal;
+        padding: 0px 10px;
+        cursor: pointer;
+      }
+      a {
+        color: $nav-grey-color;
+        text-decoration: none;
+      }
+      li a:hover {
+        color: $primary-color;
+        transition: all 0.5s ease;
+      }
+      li:hover {
+        color: $primary-color;
+        transition: all 0.5s ease;
+      }
+    }
+    .active-link {
+      border-bottom: 2px solid $primary-color;
+      width: 50px;
+      line-height: 2;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .account-section {
+    padding-top: 10px;
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      color: $nav-grey-color;
+      li {
+        text-transform: capitalize;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      a {
+        color: $nav-grey-color;
+        text-decoration: none;
+      }
+      .login {
+        border: 2px solid $primary-color;
+        padding: 7px 15px;
+        width: 150px;
+        height: 50px;
+        border-radius: 5px;
+        background-color: $primary-color;
+        text-align: center;
+        cursor: pointer;
+        margin-left: 100px;
+        color: #fff;
+        text-transform: capitalize;
+        outline: none;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 16px;
+      }
+      .bi-list {
+        color: $primary-color;
+        text-align: center;
+        cursor: pointer;
+        display: none;
+      }
+      .login:hover {
+        background-color: $btn-hover-color;
+        border: 2px solid $btn-hover-color;
+        transform: translateY(2px);
+        transition: 0.5s ease;
+      }
+    }
+    li:hover {
+      color: $primary-color;
+      transition: all 0.5s ease;
+    }
+  }
+  .hidden {
+    display: none;
+  }
+}
+
+//media query
+
+//tablet
+@media screen and (max-width: 960px) {
+  .header {
+    .header-content {
+      justify-content: space-between;
+      margin: 0px 20px;
+    }
+    .bi-list {
+      display: block !important;
+    }
+    .login {
+      display: none;
+    }
+    .action-link {
+      display: none;
+    }
+  }
+}
+//mobile
+@media screen and (max-width: 480px) {
+}

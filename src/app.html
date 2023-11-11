@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RealTime - Election-app</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/image/INECLogo.png" />
+    <link rel="stylesheet" href="/src/assest/css/app.css" />
+    <script defer type="module" src="/src/assest/js/View/app.js"></script>
+  </head>
+  <body>
+    <section class="header">
+      <div class="header-content">
+        <a href="http://localhost:1234/" class="logo"
+          ><img src="/image/logo.png" alt="inec logo"
+        /></a>
+        <div class="action-link">
+          <ul>
+            <li>
+              <a href="/src/app.html"> <li class="active-link">Home</li></a>
+            </li>
+            <li>
+              <a href=""> <li>FAQ</li></a>
+            </li>
+            <li>
+              <a href=""> <li>Contact us</li></a>
+            </li>
+            <a href="/src/dashboard.html">
+              <li class="dashboard">Dashboard</li>
+            </a>
+          </ul>
+        </div>
+        <div class="account-section">
+          <ul>
+            <button type="button" class="login">Login</button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- login-modal -->
+    <section class="loginModal">
+      <div
+        class="modal"
+        id="staticBackdrop"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdrop"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">
+                Login to your account
+              </h5>
+
+              <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+              <form action="" method="get" autocomplete="off">
+                <div class="email-input">
+                  <input
+                    type="text"
+                    placeholder="Enter your email"
+                    class="email"
+                    required
+                    autocomplete="off"
+                  />
+                  <small></small>
+                </div>
+                <div class="password-input">
+                  <input
+                    type="password"
+                    placeholder="Enter your password"
+                    class="password"
+                    required
+                    autocomplete="off"
+                  />
+                  <small></small>
+                  <div class="eye-icon">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        fill="currentColor"
+                        class="bi bi-eye-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"
+                        />
+                        <path
+                          d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"
+                        />
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        fill="currentColor"
+                        class="bi bi-eye-slash-fill hidden"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"
+                        />
+                        <path
+                          d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <span class="reset-password-link">
+                  <p class="forget-link">Forget password?</p>
+                </span>
+                <button type="submit" class="btn-login">
+                  <h6>Login</h6>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- forget-password -->
+    <section class="reset-password">
+      <div class="modal hidden" id="staticBackdrop">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title" id="staticBackdropLabel">
+                <h5>Reset password</h5>
+              </div>
+              <span class="close-reset-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div class="input-form">
+                  <input
+                    type="text"
+                    placeholder="Enter your email"
+                    class="reset-email"
+                    required
+                  />
+                  <small></small>
+                </div>
+
+                <button type="submit" class="btn-reset">
+                  <h6>Send OTP</h6>
+                  <span class="loader-spinner loader-hidden"></span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="backdrop"></div>
+
+    <!-- application-main-content -->
+    <section class="hero-section">
+      <div class="hero-heading-content" data-aos="fade-right">
+        <div class="headers">
+          <h1>
+            Bayelsa State Governorship Election
+            <span class="portal"> Result Real-time Portal.</span>
+          </h1>
+        </div>
+        <div class="sub-heading">
+          <span>
+            <p>
+              Get election result immediately as uploaded from the polling unit,
+              Let your vote count... consolidate our democracy in other to build
+              a better Nigeria for our future generation.
+            </p>
+          </span>
+        </div>
+        <div class="hero-callactionbtn">
+          <a href="/src/publicResult.html">
+            <button type="button" class="view-result">VIEW RESULT</button></a
+          >
+        </div>
+      </div>
+      <div class="hero-image-section">
+        <img src="/image/Group 7.png" alt="hero-image" />
+      </div>
+    </section>
+
+    <!--notification-->
+    <div class="notification-modal">
+      <p class="message">Incorrect login credential</p>
+    </div>
+
+    <!---sidebar-content-->
+    <div class="sidebar">
+      <span class="sidebar-header">
+        <h1>Menu</h1>
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 1024 1024"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+          class="closeIcon"
+        >
+          <path
+            d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"
+          ></path>
+        </svg>
+      </span>
+
+      <ul>
+        <li>
+          <a href="/src/app.html">Home</a>
+        </li>
+        <li>
+          <a href="">FAQ</a>
+        </li>
+        <li>
+          <a href="">Contact Us</a>
+        </li>
+      </ul>
+      <button type="button" class="login-sidebar">Login</button>
+    </div>
+
+    <!--footer section-->
+    <footer>
+      <div class="copy-write">
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            fill="currentColor"
+            class="bi bi-c-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"
+            />
+          </svg>
+          EbukaCoder-2023
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

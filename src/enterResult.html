@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="/image/INECLogo.png" />
+    <link rel="stylesheet" href="/src/assest/abstract/_enter-Result.scss" />
+    <script type="module" src="/src/assest/js/View/enterResult.js"></script>
+    <title>RealTime - Election App | Enter-result</title>
+  </head>
+  <body>
+    <section class="menu">
+      <div class="logo">
+        <a href="/src/app.html">
+          <img src="/image/logo.png" alt="inec logo" />
+        </a>
+      </div>
+      <div class="item">
+        <li>
+          <a href="/src/dashboard.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-pie-chart-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M15.985 8.5H8.207l-5.5 5.5a8 8 0 0 0 13.277-5.5zM2 13.292A8 8 0 0 1 7.5.015v7.778l-5.5 5.5zM8.5.015V7.5h7.485A8.001 8.001 0 0 0 8.5.015z"
+              /></svg
+            >Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="/src/register.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-pencil-square"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"
+              /></svg
+            >Register</a
+          >
+        </li>
+        <li>
+          <a href="/src/viewRegistered.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-people"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"
+              /></svg
+            >View Presiding Officer
+          </a>
+        </li>
+        <li>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-file-earmark-diff"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 5a.5.5 0 0 1 .5.5V7H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V8H6a.5.5 0 0 1 0-1h1.5V5.5A.5.5 0 0 1 8 5zm-2.5 6.5A.5.5 0 0 1 6 11h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"
+            />
+            <path
+              d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"
+            />
+          </svg>
+          Enter Result
+        </li>
+        <li>
+          <a href="/src/viewResult.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-card-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"
+              />
+              <path
+                d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
+              /></svg
+            >View Result</a
+          >
+        </li>
+        <li class="count-down">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-stopwatch-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6.5 0a.5.5 0 0 0 0 1H7v1.07A7.001 7.001 0 0 0 8 16a7 7 0 0 0 5.29-11.584.531.531 0 0 0 .013-.012l.354-.354.353.354a.5.5 0 1 0 .707-.707l-1.414-1.415a.5.5 0 1 0-.707.707l.354.354-.354.354a.717.717 0 0 0-.012.012A6.973 6.973 0 0 0 9 2.071V1h.5a.5.5 0 0 0 0-1h-3zm2 5.6V9a.5.5 0 0 1-.5.5H4.5a.5.5 0 0 1 0-1h3V5.6a.5.5 0 1 1 1 0z"
+            />
+          </svg>
+          Countdown
+        </li>
+        <li>
+          <a href="/src/app.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-box-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+              /></svg
+            >Logout</a>
+        </li>
+      </div>
+    </section>
+    <section class="interface">
+      <div class="navigation">
+        <div class="n1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+          <span class="timer">
+            <img
+              src="/image/360_F_620146436_OiBtowsdrOHYiAj2k1f6fAjmMewxQWMV-removebg-preview.png"
+              alt="clock"
+            />
+            <p class="time">Timer: 00h : 00m : 00s</p>
+          </span>
+
+          <span class="action">
+            <li>
+              <a href="/src/app.html">Home</a>
+            </li>
+            <p class="welcome-message">Hello admin@yahoo.com</p>
+            <li class="logout">Logout</li>
+            <span class="user-profile-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="currentColor"
+                class="bi bi-person"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"
+                />
+              </svg>
+            </span>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="dropdown-content">
+          <ul class="account">
+            <li>Hello admin@yahoo.com</li>
+            <li><a href="/src/app.html">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="enter-result-container">
+        <div class="election-type">
+          <button type="button">Governorship</button>
+        </div>
+        <div class="result-form">
+            <span class="timer">
+              <img
+                src="/image/360_F_620146436_OiBtowsdrOHYiAj2k1f6fAjmMewxQWMV-removebg-preview.png"
+                alt="clock"
+              />
+              <p class="time">Timer: 00h : 00m : 00s</p>
+            </span>
+        
+          <form
+            action=""
+            autocomplete="off"
+            method="post"
+            class="registrationForm"
+          >
+            <div class="row" id="first-form-row">
+              <div class="col">
+                <label for="state"
+                  >state<svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5"
+                    height="5"
+                    fill="currentColor"
+                    class="bi bi-asterisk"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"
+                    /></svg
+                ></label>
+                <select name="state" class="state" required>
+                  <option selected value="">Select State</option>
+                </select>
+                <small></small>
+              </div>
+              <div class="col">
+                <label for="local-govt">
+                  Local Goverment
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5"
+                    height="5"
+                    fill="currentColor"
+                    class="bi bi-asterisk"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"
+                    />
+                  </svg>
+                </label>
+                <select name="" class="local-govt">
+                  <option value="" selected class="selected-option">
+                    --Select--
+                  </option>
+                </select>
+                <small></small>
+              </div>
+              <div class="col">
+                <label for="registered-area"
+                  >Registration Area
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5"
+                    height="5"
+                    fill="currentColor"
+                    class="bi bi-asterisk"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"
+                    /></svg
+                ></label>
+                <select name="" class="registration-area">
+                  <option value="" selected class="selected-option">
+                    --Select--
+                  </option>
+                </select>
+                <small></small>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <label for="poll"
+                  >Polling unit
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5"
+                    height="5"
+                    fill="currentColor"
+                    class="bi bi-asterisk"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"
+                    /></svg
+                ></label>
+                <select name="" class="polling-unit">
+                  <option value="" selected class="selected-option">
+                    --Select--
+                  </option>
+                </select>
+                <small></small>
+              </div>
+              <div class="col">
+                <label for="Total Accredited vote"
+                  >Total Accredited vote
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5"
+                    height="5"
+                    fill="currentColor"
+                    class="bi bi-asterisk"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  type="text"
+                  name="Total Accredited Vote"
+                  class="Total_Accedited_Vote"
+                  placeholder="Total Accredited Vote"
+                  minlength="1"
+                  required
+                />
+                <small></small>
+              </div>
+              <div class="col">
+                <label for="Total Valid Vote">
+                  Total Valid Vote
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5"
+                    height="5"
+                    fill="currentColor"
+                    class="bi bi-asterisk"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  type="text"
+                  name="Total Valid Vote"
+                  class="Total_Valid_Vote"
+                  minlength="1"
+                  placeholder="Total Valid Vote"
+                  required
+                />
+                <small></small>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label for="partyA"
+                  >Party A
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5"
+                    height="5"
+                    fill="currentColor"
+                    class="bi bi-asterisk"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"
+                    /></svg
+                ></label>
+                <select name="" class="partyA">
+                  <option selected value="" class="selected-option">
+                    --Select--
+                  </option>
+                  <option value="All Progressive Congress">
+                    All Progressive Congress (APC)
+                  </option>
+                </select>
+                <small></small>
+              </div>
+              <div class="col">
+                <label for="partyA"
+                  >Party A score
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5"
+                    height="5"
+                    fill="currentColor"
+                    class="bi bi-asterisk"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"
+                    /></svg
+                ></label>
+                <input
+                  type="text"
+                  placeholder="Enter APC Score"
+                  class="partyAScore"
+                  required
+                />
+                <small></small>
+              </div>
+              <div class="col">
+                <label for="partyB"
+                  >party B
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5"
+                    height="5"
+                    fill="currentColor"
+                    class="bi bi-asterisk"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"
+                    /></svg
+                ></label>
+                <select name="" class="partyB" required>
+                  <option selected value="" class="selected-option">
+                    --Select--
+                  </option>
+                  <option value="Labour party">Labour party (LP)</option>
+                </select>
+                <small></small>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label for="partyB"
+                  >Party B score
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5"
+                    height="5"
+                    fill="currentColor"
+                    class="bi bi-asterisk"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"
+                    /></svg
+                ></label>
+                <input
+                  type="text"
+                  placeholder="Enter LP Score"
+                  class="partyBScore"
+                  required
+                />
+                <small></small>
+              </div>
+              <div class="col">
+                <label for="partyC"
+                  >Party C
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5"
+                    height="5"
+                    fill="currentColor"
+                    class="bi bi-asterisk"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"
+                    /></svg
+                ></label>
+                <select name="" class="partyC" required>
+                  <option selected value="" class="selected-option">
+                    --Select--
+                  </option>
+                  <option value="People Democratic Party">
+                    People Democratic Party (PDP)
+                  </option>
+                </select>
+                <small></small>
+              </div>
+              <div class="col">
+                <label for="partyC"
+                  >Party C score
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5"
+                    height="5"
+                    fill="currentColor"
+                    class="bi bi-asterisk"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"
+                    /></svg
+                ></label>
+                <input
+                  type="text"
+                  placeholder="Enter PDP Score"
+                  class="partyCScore"
+                  required
+                />
+                <small></small>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label for="remark"
+                  >Remark
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5"
+                    height="5"
+                    fill="currentColor"
+                    class="bi bi-asterisk"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"
+                    /></svg
+                ></label>
+                <select class="remark" required>
+                  <option selected value="" class="selected-option">
+                    --Select--
+                  </option>
+                  <option value="smooth">Smooth</option>
+                  <option value="over-voting">Over-voting</option>
+                  <option value="low turnout">Low turnout</option>
+                  <option value="ballot snatch">Ballot snatch</option>
+                </select>
+                <small></small>
+              </div>
+            </div>
+            <button type="submit" class="upload-btn" disabled>Upload</button>
+          </form>
+        </div>
+        <footer>
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-c-circle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"
+              />
+            </svg>
+            EbukaCoder-2023
+          </p>
+        </footer>
+      </div>
+    </section>
+
+    <!--request-loader-spinner-->
+    <div class="request-loader-spinner"></div>
+
+    <!--set time result modal-->
+    <div class="countdown">
+      <div class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Election Timer</h4>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+              <div class="timer">
+                <fieldset class="border px-2">
+                  <legend class="float-none w-auto py-2">Hour</legend>
+                  <h5 class="start-hour">00</h5>
+                </fieldset>
+                <fieldset class="border px-2">
+                  <legend class="float-none w-auto py-2">Min</legend>
+                  <h5 class="start-min">00</h5>
+                </fieldset>
+                <fieldset  class="border px-2">
+                  <legend class="float-none w-auto py-2">Sec</legend>
+                  <h5 class="start-sec">00</h5>
+                </fieldset>
+              </div>
+              <form>
+                <div class="row">
+                  <div class="col">
+                    <input type="text" placeholder="Start Hour" required class="startHour">
+                    <small></small>
+                  </div>
+                </div>
+               <div class="row">
+                <div class="col">
+                  <input type="text" placeholder="Start Minute" required class="startMin">
+                  <small></small>
+                </div>
+               </div>
+               <div class="row">
+                <div class="col">
+                  <input type="text" placeholder="End Hour"  required class="endHour">
+                  <small></small>
+                </div>
+               </div>
+               <div class="row">
+                <div class="col">
+                  <input type="text" placeholder="End Minute" required  class="endMin">
+                  <small></small>
+                </div>
+               </div>
+                <button type="Submit">Set Time</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- logout-modal -->
+    <section class="logout-modal">
+      <div
+        class="modal"
+        id="staticBackdrop"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdrop"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title" id="staticBackdropLabel">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-exclamation-triangle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                  />
+                </svg>
+                <p>Are you sure you want Logout</p>
+              </div>
+              <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+              <button type="button" class="confirm">Yes</button>
+              <button type="button" class="decline">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="backdrop"></div>
+    <div class="loader-spinner">
+      <div class="loader-content">
+        <div class="spin-content">
+          <div class="load"></div>
+          <p>Loading...</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

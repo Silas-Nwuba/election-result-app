@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+//color collection
+$primary-color: #025046;
+$bg-color: #fff8f8;
+$nav-grey-color: #96a081;
+$black-color: #1e1e1e;
+$grey-color: #d9d9d9;
+$btn-hover-color: #025045;
+html {
+  overflow-x: hidden;
+}
+
+// hide scrollbar for chrone,safari and opera
+body {
+  background-color: $bg-color;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+// hide scrollbar for firefox
+html {
+  scrollbar-width: none;
+}
+//hide scrollbar for egde and it
+
+body {
+  -ms-overflow-style: none;
+}

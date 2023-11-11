@@ -1,0 +1,170 @@
+@import '/node_modules/bootstrap/scss/bootstrap.scss';
+@import '/src/assest/abstract/_base.scss';
+
+.hero-section {
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px;
+  .hero-heading-content {
+    width: 60%;
+    .headers {
+      h1 {
+        font-weight: 600;
+        font-size: 2.3rem;
+      }
+      .portal {
+        color: $primary-color;
+      }
+    }
+    .sub-heading {
+      span p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 20px 0px;
+      }
+    }
+  }
+  .hero-callactionbtn {
+    a {
+      text-decoration: none;
+      color: $bg-color;
+    }
+    button {
+      width: 200px;
+      height: 50px;
+      padding: 0px 20px;
+      outline: none;
+      margin: 15px 0px;
+    }
+    .view-result {
+      background-color: $primary-color;
+      color: $bg-color;
+      border: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+  }
+  .hero-image-section {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .hidden {
+    display: none;
+  }
+  button:hover {
+    transform: translateY(2px);
+    transition: 0.5s ease;
+  }
+}
+//media query
+//tablet
+@media screen and (max-width: 968px) {
+  .hero-image-section {
+    img {
+      display: none !important;
+      width: 100%;
+    }
+  }
+  .hero-heading-content {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-section .hero-callactionbtn .view-result {
+    max-width: 200px;
+  }
+}
+
+//moblie
+@media screen and (max-width: 480px) {
+  .headers {
+    h1 {
+      font-size: 1.7rem !important;
+    }
+  }
+}
+
+// @include media('<=768px') {
+//   .hero-section {
+//     .hero-image-section img {
+//       display: none;
+//     }
+//     .hero-heading-content {
+//       margin-top: 20px;
+//       .headers {
+//         h1 {
+//           font-size: 2rem;
+//           line-height: 2rem;
+//         }
+//       }
+//     }
+//     .hero-callactionbtn {
+//       button {
+//         max-width: 120px;
+//         margin: 0;
+//         padding: 0 10px;
+//         margin-right: 10px;
+//       }
+//     }
+//   }
+// }
+footer {
+  border-top: 1px solid $grey-color;
+  width: 100%;
+  margin-top: 50px;
+  width: 100%;
+}
+.copy-write {
+  p {
+    font-size: 14px;
+    margin-left: 30px;
+    padding-top: 10px;
+  }
+}
+
+// @include media('<=490px') {
+//   .hero-heading-content {
+//     .headers {
+//       h1 {
+//         font-size: 1.5rem !important;
+//         line-height: 2rem;
+//       }
+//     }
+//     .hero-callactionbtn {
+//       button {
+//         margin: 20px 5px;
+//       }
+//     }
+//     .sub-heading {
+//       span {
+//         p {
+//           line-height: 2rem;
+//         }
+//       }
+//     }
+//   }
+// }
+// @include media('<=990px') {
+//   .hero-section {
+//     margin-top: 10px;
+//     margin-bottom: 20px;
+//   }
+//   .hero-image-section {
+//     img {
+//       display: block;
+//       width: 500px;
+//     }
+//   }
+// }
+// @include media('<=1280px') {
+//   .hero-image-section {
+//     img {
+//       max-width: 480px;
+//     }
+//   }
+// }
