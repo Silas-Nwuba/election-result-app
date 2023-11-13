@@ -70,7 +70,7 @@ class login {
     /////////////////////////////////////////
     ///password validation
     const passRegX = new RegExp('inecad+[0-9]{3,3}');
-    const adminRegx = new RegExp('admin123');
+    const adminRegx = new RegExp('admin4546');
 
     if (
       this.#password.value.trim() === null ||

@@ -2,10 +2,8 @@ import logout from './component/logout.js';
 import { createData } from '../Modal/enterResultModal.js';
 import Swal from 'sweetalert2';
 import data from '../../../data.json';
-import toastr from 'toastr';
-import { startAfter } from 'firebase/database';
 
-//element
+//elements
 const timerElement = document.querySelectorAll('.time');
 const electionTypeBtn = document.querySelector('.election-type');
 const showResultForm = document.querySelector('.result-form');
@@ -37,26 +35,23 @@ const menu = document.querySelector('.menu');
 const overlay = document.querySelector('.backdrop');
 const profileIcon = document.querySelector('.user-profile-icon');
 const dropdown = document.querySelector('.dropdown-content');
-const countdownElement = document.querySelector('.countdown');
-const countdownLink = document.querySelector('.count-down');
-const countDownModal = document.querySelector('.close');
-const setHour = document.querySelector('.startHour');
-const setMin = document.querySelector('.startMin');
-const endHour = document.querySelector('.endHour');
-const endMin = document.querySelector('.endMin');
 
 electionTypeBtn.addEventListener('click', () => {
   showResultForm.style.display = 'block';
   electionTypeBtn.style.display = 'none';
 });
-
 //countdown timer
+let dateTime = JSON.parse(localStorage.getItem('timer'));
+const timeStartHour = dateTime.setHour === 24 ? 12 : dateTime.setHour;
+const timeEndHour = dateTime.endHour === 24 ? 12 : dateTime.endHour;
+
 function countDown() {
   const currentTime = new Date();
   const startTime = new Date();
   const endTime = new Date();
-  startTime.setHours(1, 7, 0, 0);
-  endTime.setHours(2, 50, 0, 0);
+  startTime.setHours(timeStartHour, dateTime.setMin, 0, 0);
+  endTime.setHours(timeEndHour, dateTime.endMin, 0, 0);
+  console.log(startTime, endTime);
   if (currentTime >= startTime && currentTime < endTime) {
     let hour = currentTime.getHours();
     const min = currentTime.getMinutes();
@@ -69,12 +64,13 @@ function countDown() {
         .toString()
         .padStart(2, 0)} : ${sec.toString().padStart(2, 0)} ${ampm}`;
     });
-    // timerElement.style.color = 'green';
     summitBtn.removeAttribute('disabled');
   } else {
     summitBtn.setAttribute('disabled', true);
     timerElement.forEach((element) => {
       element.innerHTML = 'Timer: 00h : 00m : 00s';
+
+      localStorage.removeItem('timer');
     });
   }
 }
@@ -85,7 +81,6 @@ window.onload = function () {
   localGovt.disabled = true;
   registrationArea.disabled = true;
   pollUnit.disabled = true;
-
   selects.forEach((select) => {
     if (select.disabled === true) {
       select.style.cursor = 'auto';
@@ -137,6 +132,8 @@ window.onload = function () {
     } else {
       registrationArea.disabled = true;
       registrationArea.length = 1;
+      pollUnit.length = 1;
+      pollUnit.disabled = true;
     }
   });
   //registration area change
@@ -348,86 +345,6 @@ window.addEventListener('click', function (event) {
 dropdown.addEventListener('click', (e) => {
   e.stopPropagation();
 });
-
-//show election time
-countdownLink.addEventListener('click', () => {
-  //prettier-ignore
-  const modal = countDownModal.parentElement.parentElement.parentElement.parentElement
-  modal.style.display = 'block';
-  const overlay = document.querySelector('.backdrop');
-  overlay.style.display = 'block';
-});
-//close election timer
-countDownModal.addEventListener('click', () => {
-  //prettier-ignore
-  const modal = countDownModal.parentElement.parentElement.parentElement.parentElement
-  modal.style.display = 'none';
-  const overlay = document.querySelector('.backdrop');
-  overlay.style.display = 'none';
-  form.reset();
-  form.querySelectorAll('small').forEach((element) => {
-    element.innerHTML = '';
-  });
-});
-//set timer
-countdownElement.querySelector('form').setAttribute('novalidate', '');
-countdownElement.querySelector('form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const allInputArray = [setHour, setMin, endHour, endMin];
-  //  const hourArray = [setHour,endHour]
-  if (checkAllInputCountdown(allInputArray)) {
-    getCountdownData(setHour, setMin, endHour, endMin);
-  }
-});
-const checkAllInputCountdown = (input) => {
-  let valid = false;
-  input.forEach((element) => {
-    if (element.value.trim() === '') {
-      toastr.error('input field is required');
-      valid = false;
-    } else {
-      valid = true;
-      // countdownElement.querySelector('form').reset();
-    }
-  });
-  if (valid) {
-    return true;
-  }
-};
-const getCountdownData = (startHour, startMin, endHour, endMin) => {
-  countDownTimer(startHour, startMin, endHour, endMin);
-};
-function countDownTimer(startHour, startMin, endHour, endMin) {
-  const setHour = document.querySelector('.start-hour');
-  const setMin = document.querySelector('.start-min');
-  const setSec = document.querySelector('.start-sec');
-  const currentTime = new Date();
-  const startTime = new Date();
-  const endTime = new Date();
-  const timeStartHour = Number(startHour.value) + 12;
-  const timeEndHour = Number(endHour.value) + 12;
-  //prettier-ignore
-  startTime.setHours(timeStartHour,`${Number(startMin.value)}`, 0, 0);
-  endTime.setHours(timeEndHour, `${Number(endMin.value)}`, 0, 0);
-  if (currentTime >= startTime && currentTime < endTime) {
-    let hour = currentTime.getHours();
-    const min = currentTime.getMinutes();
-    const sec = currentTime.getSeconds();
-    console.log(hour, min, sec);
-    hour = hour % 12;
-    hour = hour ? hour : 12;
-    setHour.innerHTML = `${hour}`;
-    setMin.innerHTML = `${min}`;
-    setSec.innerHTML = `${sec}`;
-  }
-}
-setInterval(countDownTimer, 1000);
-// validateTimer();
-
-toastr.options = {
-  preventDuplicates: true,
-  preventOpenDuplicate: true,
-};
 
 //logout function
 logout.logoutFunction(logoutEvent, element, modal, backdrop);

@@ -40,11 +40,6 @@ body {
   overflow-x: hidden;
 }
 
-#toast-container {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-}
 .menu {
   background-color: $primary-color;
   width: 250px;
@@ -360,70 +355,6 @@ body {
         margin-top: 40px;
         position: relative;
         top: 0;
-      }
-    }
-  }
-}
-.countdown {
-  .modal {
-    display: none;
-    z-index: 10000;
-  }
-  .modal-header {
-    .close {
-      font-size: 28px;
-      cursor: pointer;
-    }
-  }
-  .modal-title {
-    font-size: 1.2rem;
-  }
-  .modal-body {
-    img {
-      max-width: 200px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .timer {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    fieldset {
-      text-align: center;
-      legend {
-        font-size: 0.9rem;
-      }
-    }
-    form {
-      margin: 10px 0px;
-      input {
-        width: 100%;
-        border-radius: 4px;
-        padding: 10px 15px;
-        margin: 10px 0px;
-        border: 1px solid #eeeeee;
-        outline: none;
-      }
-      input::placeholder {
-        font-size: 0.8rem;
-      }
-      button {
-        width: 120px;
-        border: none;
-        background-color: #025045;
-        color: white;
-        font-size: 0.9rem;
-        padding: 10px;
-        margin-top: 10px;
-        border-radius: 4px;
-      }
-      small {
-        font-size: 0.8rem;
-        color: red;
       }
     }
   }
