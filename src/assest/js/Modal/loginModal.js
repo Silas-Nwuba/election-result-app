@@ -13,7 +13,7 @@ export const signUser = (username, password) => {
       // Signed in
       const user = userCredential.user;
       if (user) {
-        window.location.href = `http://localhost:1234/dashboard.html`;
+        window.location.href = `http://localhost:1234/src/dashboard.html`;
         form.reset();
       }
     })

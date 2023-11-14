@@ -5,8 +5,8 @@
   "default": "app.html",
   "browerslist": "> 0.5%, last 3 versions, not dead",
   "scripts": {
-    "start": "parcel src/app.html",
-    "build": "parcel build src/app.html --dist-dir ./dist"
+    "start": "parcel app.html",
+    "build": "parcel build app.html --dist-dir ./dist"
   },
   "repository": {
     "type": "git",
